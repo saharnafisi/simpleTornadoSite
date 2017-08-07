@@ -6,7 +6,7 @@ class mainHandler(tornado.web.RequestHandler):
         self.write("get request send")
     
     def post(self):
-        self.write("post request send")
+        #self.write("post request send")
         name=self.get_argument("name")
         self.write(name)
 
