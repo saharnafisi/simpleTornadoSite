@@ -7,9 +7,9 @@ class mainHandler(tornado.web.RequestHandler):
     
     def post(self):
         #self.write("post request send")
-        name=self.get_argument("name")
-        self.write(name)
-
+        #items=["صفحه اصلی","ثبت نام","ورود","درباره ما","خروج"]
+        items=["sahar"]
+        self.render("header.html" ,items=items)
 
 
 if __name__=="__main__":
