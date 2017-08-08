@@ -5,14 +5,15 @@ import os
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("get request send")
+        #self.write("get request send")
+        items = ["صفحه اصلی", "ثبت نام", "ورود", "درباره ما", "خروج"]
+        self.render("header.html",items=items)
 
     def post(self):
         #self.write("post request send")
         items = ["صفحه اصلی", "ثبت نام", "ورود", "درباره ما", "خروج"]
         # items=["sahar"]
-        name = "sahar"
-        self.render("header.html", items=items, name=name)
+        
 
 
 if __name__ == "__main__":
