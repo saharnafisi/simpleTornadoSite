@@ -3,41 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
-        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="styles.css">
         <title>وبسایت تستی</title>
-        <style>
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color:palevioletred;
-            }
-
-            li {
-                float: right;
-            }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 16px;
-                text-decoration: none;
-            }
-
-            li a:hover {
-                background-color:lightpink;
-            }
-        </style>
     </head>
     <body>
         <ul>
-            {% for item in items %}
-            <li><a href="">{{ escape(item) }}</a></li>
-            {% end %}
+            <li><a href="main.php">صفحه اصلی</a></li>
+            <li><a href="register.php">ثبت نام</a></li>
+            <li><a href="login.php">ورود</a></li>
+            <li><a href="aboutUs.php">درباره ما</a></li>
+            <li><a href="logout.php">خروج</a></li>
         </ul>
-        <p>{{ name }}</p>
     </body>

@@ -21,8 +21,7 @@ if __name__ == "__main__":
     }
 
     app = tornado.web.Application([
-        (r"/", MainHandler,
-        dict(path=settings['static_path']),
+        (r"/", MainHandler),
     ], **settings)
 
 
