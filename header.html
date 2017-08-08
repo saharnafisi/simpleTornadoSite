@@ -35,11 +35,8 @@
     </head>
     <body>
         <ul>
-            <li><a href="">.</a></li>
-            <li><a href="">.</a></li>
-            <li><a href="">.</a></li>
-            <li><a href="">.</a></li>
-            <li><a href="">.</a></li>
+            {% for item in items %}
+            <li><a href="">{{ escape(item) }}</a></li>
+            {% end %}
         </ul>
-        <p>{{ items }}</p>
     </body>
