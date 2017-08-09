@@ -1,0 +1,21 @@
+{
+  "name": "Sahar Nafisi",
+  "homepage": "https://github.com/saharnafisi/simpleTornadoSite",
+  "authors": [
+    "Sahar Nafisi"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-rtl": "^3.4.0"
+  }
+}
