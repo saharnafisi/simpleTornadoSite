@@ -9,7 +9,7 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         #self.write("get request send")
         items = ["صفحه اصلی", "ثبت نام", "ورود", "درباره ما", "خروج"]
-        self.render("header.html", items=items)
+        self.render("Header.html", items=items)
 
     def post(self):
         #self.write("post request send")
@@ -39,7 +39,8 @@ class RegisterUser(tornado.web.RequestHandler):
 
 if __name__ == "__main__":
     settings = {
-        "static_path": os.path.join(os.path.dirname(__file__), "static")
+        "static_path": os.path.join(os.path.dirname(__file__), "static"),
+        "template_path": os.path.join(os.path.dirname(__file__), "templates")
     }
 
     app = tornado.web.Application([
