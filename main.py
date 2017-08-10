@@ -8,7 +8,7 @@ import re
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         #self.write("get request send")
-        self.render("Header.html")
+        self.render("Base.html")
 
     def post(self):
         self.write("post request send")
