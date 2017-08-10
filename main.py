@@ -8,12 +8,11 @@ import re
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         #self.write("get request send")
-        items = ["صفحه اصلی", "ثبت نام", "ورود", "درباره ما", "خروج"]
-        self.render("Header.html", items=items)
+        self.render("Header.html")
 
     def post(self):
-        #self.write("post request send")
-        items = ["صفحه اصلی", "ثبت نام", "ورود", "درباره ما", "خروج"]
+        self.write("post request send")
+        #items = ["صفحه اصلی", "ثبت نام", "ورود", "درباره ما", "خروج"]
         # items=["sahar"]
 
 
@@ -28,12 +27,11 @@ class RegisterUser(tornado.web.RequestHandler):
         email = self.get_argument("email")
         password = self.get_argument("password")
         key=self.get_argument("key")
-        key_rex=r'[a-z]{2}[0-9]{3}'
         query = """INSERT INTO 'user'('firstName','lastName','education','email','password','keys')
          VALUES(?,?,?,?,?,?)"""
         cursor = self.application.db.cursor()
-        #cursor.execute(query, [fname, lastname, education, email, password, "sssss"])
-        cursor.execute(query, ["sahar", "nafisi", "diplom", "sahar@gmail.com", "123", "sssss"])
+        cursor.execute(query, [fname, lname, education, email, password, key])
+        #cursor.execute(query, ["sahar", "nafisi", "diplom", "sahar@gmail.com", "123", "sssss"])
         self.application.db.commit()
         self.redirect("/addUser")
 
