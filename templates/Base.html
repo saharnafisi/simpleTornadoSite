@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="fa">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap-rtl.min.css" />
-        <link rel="stylesheet" href="static/css/styles.css">
-        <title>{% block title %}{% end %}</title>
-    </head>
-    <body>
-        {% include Menu.html %}
-        <div class="container main-container">
-            {% block content %}{% end %}
-        </div>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>{% block title %}{% end %}</title>
+</head>
+
+<body style="background-image: url('{{ static_url('image/background2.jpg') }}');
+     background-attachment: fixed; background-repeat: no-repeat;
+     background-size: cover; background-position: center;">
+    {% include Menu.html %}
+    <div class="container main-container">
+        {% block content %}{% end %}
+    </div>
+</body>
+
 </html>
